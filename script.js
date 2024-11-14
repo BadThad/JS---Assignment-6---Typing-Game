@@ -37,11 +37,11 @@ let randomWord;
 let score=0;
 let time=10;
 
-function addWordtoDOM () {
-  return words[Math.floor(Math.random() *words.length)];
+function randomWord () {
+  return words[Math.floor(Math.random() * words.length)];
 }
 
-console.log(addWordtoDOM());
+
 
 updateScore ();
 
