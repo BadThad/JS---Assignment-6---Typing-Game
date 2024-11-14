@@ -37,11 +37,23 @@ let randomWord;
 let score=0;
 let time=10;
 
-function randomWord () {
+function getRandomWord () {
   return words[Math.floor(Math.random() * words.length)];
 }
 
+function addWordtoDOM () {
+  randomWord = getRandomWord();
+  word.innerhtml = randomWord;
+}
+addWordtoDOM();
 
+text.addEventListener("input", (event) => {     // Adds an EventListener to the input field of the HTML document.
+  const inputText = event.target.value;
+  if (inputText === randomWord) {
+    addWordtoDOM();                 // If statement which adds a new random word to the input field.
+    event.target.value = "";        // Clears the input field when user types the correct word.
+  }
+});
 
 updateScore ();
 
