@@ -1,5 +1,15 @@
 // Variables for the DOM elements
 
+let word = document.getElementById("word");
+let text = document.getElementById("text");
+let scorekeeper = document.getElementById("score");
+let timekeeper = document.getElementById("time");
+
+let settingsbtn = document.querySelector(".settings-btn");
+
+
+
+
 // Array
 const words = [
   "dependent",
@@ -22,3 +32,20 @@ const words = [
   "loving",
   "north",
 ];
+
+let randomWord;
+let score=0;
+let time=10;
+
+function addWordtoDOM () {
+  return words[Math.floor(Math.random() *words.length)];
+}
+
+console.log(addWordtoDOM());
+
+updateScore ();
+
+updateTime ();
+
+GameOver ();
+
