@@ -75,6 +75,7 @@ text.addEventListener("input", (event) => {     // Adds an EventListener to the 
   if (inputText === randomWord) {
     addWordtoDOM();                 // If statement which adds a new random word to the input field.
     event.target.value = "";        // Clears the input field when user types the correct word.
-    updateScore();                  // Runs the updateScore function.
+    updateScore();
+    time+=5;                    // Adds 5s to the timer when the updateScore functions runs.
   }
 });
