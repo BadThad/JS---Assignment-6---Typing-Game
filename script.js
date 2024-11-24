@@ -103,6 +103,6 @@ settingsbtn.addEventListener("click", ()=>{
 })                                            // This functions as a toggle for the difficulty selection tab.
 
 settingsForm.addEventListener("change", (event) => {    // Eventlistener for "change" event on the HTML <select> tag which assigns difficulty.
-  difficulty.event.target.value;
+  difficulty = event.target.value;
   localStorage.setItem("difficulty", difficulty)    // Using localStorage to access the object from the document and pairing that value to
 })                                                  // that of the object named difficulty.
